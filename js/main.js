@@ -2,7 +2,7 @@
 
 document.documentElement.classList.add("js");
 
-// The navigation remains visible when JavaScript is unavailable.
+// Mobile menu
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-nav");
 menuButton?.addEventListener("click", () => {
@@ -20,7 +20,7 @@ navigation?.addEventListener("keydown", (event) => {
   }
 });
 
-// One accessible native dialog serves both character dossiers and stills.
+// Character and gallery viewer
 const viewer = document.querySelector("#archive-viewer");
 let previousTrigger;
 if (viewer) {
@@ -53,7 +53,7 @@ if (viewer) {
   viewer.addEventListener("close", () => previousTrigger?.focus());
 }
 
-// Search only the visible nine-record table. Empty results get a clear message.
+// Titan search
 const titanSearch = document.querySelector("#titan-search");
 if (titanSearch) {
   const rows = [...document.querySelectorAll(".titan-table tbody tr")];
@@ -71,7 +71,7 @@ if (titanSearch) {
   });
 }
 
-// This is an explicitly labelled fan activity: nothing is sent to a server.
+// Recruit card
 const recruitForm = document.querySelector("#recruit-form");
 let recruitCard = "";
 if (recruitForm) {
