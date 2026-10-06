@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Create a fictional Survey Corps recruit card and learn more about this student fan archive."
+    />
+    <meta name="theme-color" content="#1e392a" />
+    <title>Enlist with the Scouts | Survey Corps Archive</title>
+    <link rel="icon" href="assets/crest.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><img src="assets/crest.svg" alt="" width="37" height="48" /><span
+            ><strong>SURVEY CORPS</strong
+            ><small>THE UNOFFICIAL ARCHIVE</small></span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          Menu +
+        </button>
+        <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">Lore & factions</a>
+          <a href="titans.html">Titan archive</a>
+          <a href="episodes.html">Episodes</a>
+          <a href="join.html" aria-current="page" class="nav-enlist"
+            >Enlist →</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro">
+        <div class="container">
+          <nav class="breadcrumb-line" aria-label="Breadcrumb">
+            <a href="index.html">ARCHIVE</a><span aria-hidden="true">/</span
+            ><span>ENLISTMENT</span>
+          </nav>
+          <p class="eyebrow">Field guide · Chapter 04</p>
+          <h1>Your heart.<br />Your choice.</h1>
+          <p class="lead mb-0">
+            Every expedition begins with a decision. Choose your regiment and
+            create a small piece of your own fan story.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container join-layout">
+          <div class="form-panel">
+            <p class="eyebrow">Recruitment desk · Fan activity</p>
+            <h2>New recruit record</h2>
+            <p class="form-help mb-4">
+              Fields marked * are required. This is a fictional activity:
+              information stays in this page and is not sent or stored. Use a
+              nickname and a sample email.
+            </p>
+            <form id="recruit-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="recruit-name-input"
+                    >Name or callsign *</label
+                  ><input
+                    class="form-control"
+                    id="recruit-name-input"
+                    name="name"
+                    type="text"
+                    required
+                    minlength="2"
+                    maxlength="60"
+                    autocomplete="off"
+                    placeholder="e.g. Scout Assem"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="recruit-email">Email *</label
+                  ><input
+                    class="form-control"
+                    id="recruit-email"
+                    name="email"
+                    type="email"
+                    required
+                    maxlength="120"
+                    autocomplete="off"
+                    placeholder="scout@example.com"
+                  />
+                </div>
+              </div>
+              <div class="mt-4">
+                <label class="form-label" for="regiment"
+                  >Choose your regiment *</label
+                ><select
+                  class="form-select"
+                  id="regiment"
+                  name="regiment"
+                  required
+                >
+                  <option value="">Select a regiment</option>
+                  <option>Survey Corps</option>
+                  <option>Garrison Regiment</option>
+                  <option>Military Police</option>
+                  <option>Cadet Corps</option>
+                </select>
+              </div>
+              <fieldset class="mt-4">
+                <legend>Your experience with the series *</legend>
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      id="experience-new"
+                      type="radio"
+                      name="experience"
+                      value="New recruit"
+                      required
+                    /><label class="form-check-label" for="experience-new"
+                      >First watch</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      id="experience-veteran"
+                      type="radio"
+                      name="experience"
+                      value="Veteran"
+                    /><label class="form-check-label" for="experience-veteran"
+                      >Rewatching</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      id="experience-reader"
+                      type="radio"
+                      name="experience"
+                      value="Manga reader"
+                    /><label class="form-check-label" for="experience-reader"
+                      >Manga reader</label
+                    >
+                  </div>
+                </div>
+              </fieldset>
+              <div class="mt-4">
+                <label class="form-label" for="recruit-message"
+                  >Why do you choose this regiment? *</label
+                ><textarea
+                  class="form-control"
+                  id="recruit-message"
+                  name="message"
+                  rows="4"
+                  minlength="10"
+                  maxlength="800"
+                  required
+                  placeholder="Tell us what freedom means to your character…"
+                  aria-describedby="message-help"
+                ></textarea>
+                <p class="form-help mt-2" id="message-help">
+                  10–800 characters. Your answer is used only to validate the
+                  form.
+                </p>
+              </div>
+              <div class="form-check mt-4">
+                <input
+                  class="form-check-input"
+                  id="fan-consent"
+                  type="checkbox"
+                  name="consent"
+                  required
+                /><label class="form-check-label" for="fan-consent"
+                  >I understand this is a fictional fan activity, not a real
+                  application. *</label
+                >
+              </div>
+              <div class="form-actions">
+                <button
+                  class="btn btn-gold"
+                  id="create-card"
+                  type="submit"
+                  disabled
+                >
+                  CREATE RECRUIT CARD ↗</button
+                ><button class="btn btn-outline-archive" type="reset">
+                  CLEAR FORM
+                </button>
+              </div>
+              <noscript
+                ><p class="spoiler-note mt-3">
+                  Enable JavaScript to create a card. This form does not send
+                  data to a server.
+                </p></noscript
+              >
+            </form>
+            <section
+              class="form-status"
+              id="form-status"
+              role="status"
+              tabindex="-1"
+              hidden
+            >
+              <p class="eyebrow">Recruit card ready</p>
+              <h3>Welcome, <span id="recruit-name"></span>.</h3>
+              <p class="small">
+                Chosen regiment: <strong id="recruit-regiment"></strong>. Your
+                fictional record is ready. No application or email was sent.
+              </p>
+              <button class="btn btn-gold" id="download-card" type="button">
+                DOWNLOAD CARD ↓
+              </button>
+            </section>
+          </div>
+          <aside class="join-aside" id="contact">
+            <p class="eyebrow">Before you head out</p>
+            <h2>Curiosity is<br />a good beginning.</h2>
+            <ol class="mt-4">
+              <li>
+                <strong>Know the world.</strong><br />Read the faction guide and
+                find a branch that suits your character.
+              </li>
+              <li>
+                <strong>Choose your role.</strong><br />A strategist, a
+                researcher, a defender — courage takes different forms.
+              </li>
+              <li>
+                <strong>Make it your story.</strong><br />Create a recruit card.
+                Keep it, or start over with another regiment.
+              </li>
+            </ol>
+            <hr />
+            <h2>Contact the archive</h2>
+            <p>
+              This archive is a university fan project by the SE-2540 team. For
+              project questions, contact the project owner through the GitHub
+              profile below.
+            </p>
+            <a
+              class="text-link contact-link"
+              href="https://github.com/asemtygelbaeva-byte"
+              target="_blank"
+              rel="noopener noreferrer"
+              >asemtygelbaeva-byte on GitHub ↗</a
+            >
+            <hr />
+            <div class="faq">
+              <h3>Field questions</h3>
+              <details>
+                <summary>Is this an official Attack on Titan website?</summary>
+                <p>
+                  No. It is a student-made fan archive. Official news and
+                  releases are available from shingeki.tv.
+                </p>
+              </details>
+              <details>
+                <summary>Does this send my information anywhere?</summary>
+                <p>
+                  No. The form validates in your browser and creates a text card
+                  containing only your name and chosen regiment. The email and
+                  message are not included in the download. Reloading the page
+                  clears the generated card.
+                </p>
+              </details>
+              <details>
+                <summary>Can I explore without spoilers?</summary>
+                <p>
+                  The home page stays close to the opening premise. The lore
+                  page labels later revelations; the Titan table, battle gallery
+                  and later season guides contain spoilers.
+                </p>
+              </details>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-intro">
+            <a class="brand" href="index.html"
+              ><img src="assets/crest.svg" alt="" width="37" height="48" /><span
+                ><strong>SURVEY CORPS</strong
+                ><small>THE UNOFFICIAL ARCHIVE</small></span
+              ></a
+            >
+            <p>
+              A fan-made field guide to the world of Attack on Titan. For the
+              curious, the rewatchers, and everyone who looked beyond the walls.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <b>Explore</b><a href="about.html">Lore & factions</a
+              ><a href="titans.html">The Nine Titans</a
+              ><a href="episodes.html">Episode guide</a>
+            </div>
+            <div>
+              <b>Contact & connect</b
+              ><a href="join.html#contact">Contact the archive</a
+              ><a
+                href="https://shingeki.tv/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Official anime website ↗</a
+              ><a
+                href="https://x.com/anime_shingeki"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Official X / Twitter ↗</a
+              ><a href="about.html#credits">Sources & credits</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Survey Corps Archive · SE-2540 student project.</span
+          ><span
+            >Attack on Titan © Hajime Isayama / Kodansha and the anime
+            production committees. Unofficial fan site.</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
