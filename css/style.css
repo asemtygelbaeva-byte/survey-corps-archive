@@ -1,4 +1,4 @@
-/* Survey Corps Archive — shared styles, loaded after Bootstrap. */
+/* Shared styles */
 :root {
   --forest: #1e392a;
   --gold: #cfa153;
@@ -95,7 +95,7 @@ p {
 .skip-link:focus {
   top: 0.5rem;
 }
-/* Flexbox keeps the shared logo and navigation aligned. */
+/* Header and navigation */
 .site-header {
   position: sticky;
   top: 0;
@@ -260,7 +260,7 @@ p {
   font-size: 13px;
   color: var(--muted);
 }
-/* The large background is decorative; all primary text remains real HTML. */
+/* Home hero */
 .hero {
   min-height: 665px;
   position: relative;
@@ -1175,7 +1175,7 @@ fieldset {
 [hidden] {
   display: none !important;
 }
-/* Tablet breakpoint: preserve generous spacing while reducing columns. */
+/* Tablet */
 @media (max-width: 991px) {
   .header-inner {
     gap: 20px;
@@ -1245,7 +1245,7 @@ fieldset {
     font-size: 9px;
   }
 }
-/* Mobile breakpoint: readable type, stacked sections and a compact menu. */
+/* Mobile */
 @media (max-width: 640px) {
   :root {
     --space: 58px;
