@@ -4,7 +4,7 @@ All images are from the official **Attack on Titan** anime website, [shingeki.tv
 
 **Rights notices:** © Hajime Isayama, Kodansha / ATTACK ON TITAN Production Committee; © Hajime Isayama, Kodansha / ATTACK ON TITAN The Final Season Production Committee.
 
-Files are stored locally. Images were resized and compressed for web delivery; character stills were converted to PNG. No generative replacement images are used.
+Images are stored locally, resized and compressed for the website. Character stills use PNG format.
 
 | Local file                                | Description                                                                             | Dimensions  | Official source                                                                                                                |
 | ----------------------------------------- | --------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------ |

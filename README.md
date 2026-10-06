@@ -9,7 +9,7 @@
 
 ## Project idea
 
-Survey Corps Archive is an unofficial fan guide to _Attack on Titan / Shingeki no Kyojin_. Its five pages introduce the world, its military factions, key characters, Titan powers and the anime seasons. The design uses forest green, charcoal, parchment and gold to suggest a military archive.
+Survey Corps Archive is a fan website about _Attack on Titan / Shingeki no Kyojin_. It covers the story, military factions, characters, Titan powers and seasons. The green, gold and parchment colours are inspired by the Survey Corps and military records.
 
 ## Pages and features
 
@@ -32,9 +32,9 @@ The Titan table is a snapshot of **year 854, before the raid on Liberio**. This 
 - JavaScript for the menu, search, dialog and browser-only recruit-card activity.
 - Locally stored Cinzel and Montserrat fonts, including their open font licences.
 
-## Requirement map
+## Layout
 
-| Midterm requirement                        | Where to inspect                                                                  |
+| Feature                                    | Implementation                                                                    |
 | ------------------------------------------ | --------------------------------------------------------------------------------- |
 | At least five linked pages                 | Five HTML files; shared `.site-nav`                                               |
 | Semantic headings, lists, links and images | All pages; military list on `about.html`                                          |
@@ -53,17 +53,15 @@ The Titan table is a snapshot of **year 854, before the raid on Liberio**. This 
 | Contact, copyright and social links        | Shared footer; contact section on `join.html`                                     |
 | Online publication                         | GitHub Pages, linked above                                                        |
 
-## Individual contributions
+## Team responsibilities
 
-The following responsibility split is proposed for team review and preparation. Before submission, each member should check their sections and update the table to reflect their actual contribution.
+Planned division of work:
 
-| Member                | Proposed responsibility                                                             |
+| Member                | Area                                                                                |
 | --------------------- | ----------------------------------------------------------------------------------- |
 | Assem Tugelbay        | Home page, shared header/footer, visual system, CSS variables and final integration |
 | Zhansaya Boranbaikyzy | Lore/factions page, Titan comparison, gallery, story references and asset credits   |
 | Alina Ibadulla        | Bootstrap episode page, enlistment form, browser interactions and responsive checks |
-
-All members prepare to explain the complete website and practise live changes to HTML, CSS and Bootstrap.
 
 ## Screenshots
 
@@ -91,19 +89,13 @@ All members prepare to explain the complete website and practise live changes to
 
 ![Home at mobile width](screenshots/home-mobile.jpg)
 
-## Verification
+## Testing
 
-- All five pages checked at 1280px, 768px and 390px; no page-level horizontal overflow. The table scrolls within its own region.
-- Local HTML links, section fragments, image paths and font files checked.
-- Character dossiers and battle images open in the dialog; Escape closes it and returns focus.
-- Titan search tested with matching and zero-result queries.
-- Season lists expand and collapse; Season 1 contains 25 episode entries.
-- The form blocks empty fields and invalid email addresses, creates a valid recruit card, downloads the expected text file and resets correctly.
-- Mobile navigation opens and closes. JavaScript passes `node --check`.
+The pages were checked at desktop, tablet and mobile widths (1280px, 768px and 390px). Navigation, image viewers, Titan search, episode lists and form validation were tested. Links and local assets were also checked.
 
 ## Form behaviour
 
-The recruitment form is a **fictional fan activity**, clearly labelled on the page. It does not send an email, create an account or make a network request. After valid input it creates a downloadable text card containing only the entered name and regiment. The email and message are not stored or included in the card. No backend or analytics are used.
+The enlistment form creates a fictional recruit card in the browser. The card can be downloaded as a text file with the entered name and regiment. The form has no backend: the email and message are not sent or saved.
 
 ## Assets and references
 
@@ -113,5 +105,3 @@ The recruitment form is a **fictional fan activity**, clearly labelled on the pa
 - [Crunchyroll watch-order guide](https://www.crunchyroll.com/news/guides/2023/3/1/guide-attack-on-titan-watch-order).
 - [Bootstrap documentation](https://getbootstrap.com/docs/5.3/), [MIT licence](vendor/bootstrap.LICENSE).
 - [Cinzel licence](assets/fonts/Cinzel-OFL.txt), [Montserrat licence](assets/fonts/Montserrat-OFL.txt).
-
-See [DEFENSE_RU.md](DEFENSE_RU.md) for a walkthrough and practice tasks for the individual defence.
