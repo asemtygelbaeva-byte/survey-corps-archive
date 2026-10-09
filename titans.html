@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A searchable comparison of the Nine Titans and a gallery of key moments from Attack on Titan."
+      content="A comparison of the Nine Titans and a gallery of key moments from Attack on Titan."
     />
     <meta name="theme-color" content="#1e392a" />
     <title>The Nine Titans | Survey Corps Archive</title>
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -25,14 +24,6 @@
             ><small>THE UNOFFICIAL ARCHIVE</small></span
           ></a
         >
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="main-navigation"
-        >
-          Menu +
-        </button>
         <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="about.html">Lore & factions</a>
@@ -74,22 +65,6 @@
             refer to the listed or noted forms, not every possible
             manifestation.
           </p>
-          <div class="record-toolbar">
-            <div class="record-search">
-              <label class="visually-hidden" for="titan-search"
-                >Search Titans, inheritors or abilities</label
-              ><input
-                class="form-control"
-                id="titan-search"
-                type="search"
-                placeholder="Search a Titan, inheritor or ability…"
-                autocomplete="off"
-              />
-            </div>
-            <span class="small-label muted" id="record-count" role="status"
-              >9 of 9 records</span
-            >
-          </div>
           <div
             class="table-scroll"
             role="region"
@@ -176,9 +151,6 @@
               </tbody>
             </table>
           </div>
-          <p id="no-records" class="spoiler-note mt-3" hidden>
-            No records match your search. Try “Eren”, “armour” or “15 m”.
-          </p>
           <p class="table-footnote">
             ¹ The Founding Titan has no single height: Frieda Reiss’s form was
             13 m; Eren’s ordinary Attack Titan form is 15 m. These are different
@@ -200,20 +172,18 @@
               <h2>Moments that changed<br />the battlefield.</h2>
             </div>
             <p>
-              Six records from the anime. Select a still for a closer look.
+              Six records from the anime. Select a still to open the full image in a new tab.
               Includes scenes through the Final Season.
             </p>
           </div>
           <div class="gallery-grid">
             <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/fall-shiganshina.jpg"
-                data-title="The day the wall fell"
-                data-description="The Colossal Titan appears at Shiganshina, breaking a century of apparent safety."
-                aria-label="View The day the wall fell"
+              <a
+                class="gallery-link"
+                href="assets/images/fall-shiganshina.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open The day the wall fell image in a new tab"
               >
                 <img
                   src="assets/images/fall-shiganshina.jpg"
@@ -222,20 +192,18 @@
                   height="450"
                   loading="lazy"
                 />
-              </button>
+              </a>
               <figcaption>
                 The day the wall fell<small>Season 1 · Episode 1</small>
               </figcaption>
             </figure>
             <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-trost.jpg"
-                data-title="The defence of Trost"
-                data-description="Eren faces the Colossal Titan during the battle for the southern district of Wall Rose."
-                aria-label="View The defence of Trost"
+              <a
+                class="gallery-link"
+                href="assets/images/battle-trost.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open The defence of Trost image in a new tab"
               >
                 <img
                   src="assets/images/battle-trost.jpg"
@@ -244,20 +212,18 @@
                   height="450"
                   loading="lazy"
                 />
-              </button>
+              </a>
               <figcaption>
                 The defence of Trost<small>Season 1 · Episode 5</small>
               </figcaption>
             </figure>
             <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-stohess.jpg"
-                data-title="A battle in Stohess"
-                data-description="The confrontation with the Female Titan reaches the streets of Stohess."
-                aria-label="View A battle in Stohess"
+              <a
+                class="gallery-link"
+                href="assets/images/battle-stohess.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open A battle in Stohess image in a new tab"
               >
                 <img
                   src="assets/images/battle-stohess.jpg"
@@ -266,20 +232,18 @@
                   height="450"
                   loading="lazy"
                 />
-              </button>
+              </a>
               <figcaption>
                 A battle in Stohess<small>Season 1 · Episode 25</small>
               </figcaption>
             </figure>
             <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-shiganshina.jpg"
-                data-title="Return to Shiganshina"
-                data-description="The Scouts return to the district where the story began, seeking to reclaim Wall Maria."
-                aria-label="View Return to Shiganshina"
+              <a
+                class="gallery-link"
+                href="assets/images/battle-shiganshina.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Return to Shiganshina image in a new tab"
               >
                 <img
                   src="assets/images/battle-shiganshina.jpg"
@@ -288,20 +252,18 @@
                   height="450"
                   loading="lazy"
                 />
-              </button>
+              </a>
               <figcaption>
                 Return to Shiganshina<small>Season 3 · Episode 50</small>
               </figcaption>
             </figure>
             <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-liberio.jpg"
-                data-title="Attack on Liberio"
-                data-description="Eren’s Attack Titan during the raid on Liberio."
-                aria-label="View Attack on Liberio"
+              <a
+                class="gallery-link"
+                href="assets/images/battle-liberio.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Attack on Liberio image in a new tab"
               >
                 <img
                   src="assets/images/battle-liberio.jpg"
@@ -310,20 +272,18 @@
                   height="450"
                   loading="lazy"
                 />
-              </button>
+              </a>
               <figcaption>
                 Attack on Liberio<small>Final Season · Episode 65</small>
               </figcaption>
             </figure>
             <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-liberio-scouts.jpg"
-                data-title="The other side of the war"
-                data-description="A close-up of an Eldian armband in a scene from episode 66."
-                aria-label="View The other side of the war"
+              <a
+                class="gallery-link"
+                href="assets/images/battle-liberio-scouts.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open The other side of the war image in a new tab"
               >
                 <img
                   src="assets/images/battle-liberio-scouts.jpg"
@@ -332,7 +292,7 @@
                   height="450"
                   loading="lazy"
                 />
-              </button>
+              </a>
               <figcaption>
                 The other side of the war<small>Final Season · Episode 66</small>
               </figcaption>
@@ -389,24 +349,5 @@
         </div>
       </div>
     </footer>
-    <dialog
-      class="archive-dialog"
-      id="archive-viewer"
-      aria-labelledby="viewer-title"
-      aria-describedby="viewer-description"
-    >
-      <button
-        class="dialog-close"
-        type="button"
-        aria-label="Close archive viewer"
-      >
-        Close ×
-      </button>
-      <img class="dialog-image" src="assets/images/eren.png" alt="" />
-      <div class="dialog-copy">
-        <h2 id="viewer-title">Archive record</h2>
-        <p id="viewer-description"></p>
-      </div>
-    </dialog>
   </body>
 </html>

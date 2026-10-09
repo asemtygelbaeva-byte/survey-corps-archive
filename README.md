@@ -15,11 +15,11 @@ Survey Corps Archive is a fan website about _Attack on Titan / Shingeki no Kyoji
 
 | Page                           | Content and implementation                                                                                                              |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [Home](index.html)             | Cinematic hero, three wall cards, four character dossiers, Flexbox navigation and CSS Grid sections                                     |
+| [Home](index.html)             | Cinematic hero, three wall cards, four expandable HTML character dossiers, Flexbox navigation and CSS Grid sections                                     |
 | [Lore & factions](about.html)  | World introduction, accessible wall diagram, military list, alternating commander rows and expandable spoiler records                   |
-| [Titan archive](titans.html)   | Nine-row comparison table, live search, empty-result state and six-image battle gallery with a native dialog viewer                     |
+| [Titan archive](titans.html)   | Nine-row comparison table and six-image CSS Grid gallery; each image opens in a new tab                     |
 | [Episode guide](episodes.html) | Four Bootstrap season cards, expandable episode lists, episode ranges and a sticky music/sidebar section                                |
-| [Enlistment](join.html)        | Labelled form with required fields, email validation, select, radios, checkbox, textarea, reset and downloadable fictional recruit card |
+| [Enlistment](join.html)        | Practice form with native HTML validation, select, radios, checkbox, textarea, reset and a CSS `:target` end note |
 
 The Titan table is a snapshot of **year 854, before the raid on Liberio**. This avoids mixing inheritors from different points in the story. The episode guide counts 87 regular episodes and two long Final Chapters specials; platforms may divide the specials differently.
 
@@ -27,9 +27,9 @@ The Titan table is a snapshot of **year 854, before the raid on Liberio**. This 
 
 - Semantic HTML5 with a header, navigation, main and footer on every page.
 - External stylesheets: `css/style.css` and locally hosted Google Font definitions in `css/fonts.css`.
-- **Bootstrap 5.3.8**, stored in `vendor/`. The episode cards use `.row`, `.col-md-6`, `.g-4`, `.card` and `.h-100`; forms and other sections use Bootstrap spacing, button, form and alignment utilities.
+- **Bootstrap 5.3.8 CSS only**, stored in `vendor/`. No Bootstrap JavaScript is included. The episode cards use `.row`, `.col-md-6`, `.g-4`, `.card` and `.h-100`; forms and other sections use Bootstrap spacing, button, form and alignment utilities.
 - CSS Flexbox, CSS Grid, custom properties, relative/absolute positioning and sticky navigation/sidebar.
-- JavaScript for the menu, search, dialog and browser-only recruit-card activity.
+- HTML and CSS only: no scripts, inline event handlers, JavaScript files or server code. Native `<details>` / `<summary>` elements provide expandable content.
 - Locally stored Cinzel and Montserrat fonts, including their open font licences.
 
 ## Layout
@@ -45,7 +45,7 @@ The Titan table is a snapshot of **year 854, before the raid on Liberio**. This 
 | Flexbox                                    | `.header-inner`, `.site-nav`, card content and action rows                        |
 | Grid                                       | `.walls-grid`, `.character-grid`, `.gallery-grid`, page layouts                   |
 | Positioning                                | `.hero` and `.hero-art` use relative/absolute; `.sticky-sidebar` uses sticky      |
-| `:hover` and `:focus`                      | Buttons, navigation, gallery and dossier links; visible keyboard focus            |
+| `:hover` and `:focus`                      | Buttons, navigation, gallery links and dossier summaries; visible keyboard focus            |
 | `:nth-child()`                             | Alternating table rows and commander layouts                                      |
 | Google Fonts / self-hosted font            | Local Cinzel and Montserrat in `assets/fonts/`                                    |
 | Lazy images                                | Below-the-fold character, wall, commander, gallery and season images              |
@@ -61,7 +61,7 @@ Planned division of work:
 | --------------------- | ----------------------------------------------------------------------------------- |
 | Assem Tugelbay        | Home page, shared header/footer, visual system, CSS variables and final integration |
 | Zhansaya Boranbaikyzy | Lore/factions page, Titan comparison, gallery, story references and asset credits   |
-| Alina Ibadulla        | Bootstrap episode page, enlistment form, browser interactions and responsive checks |
+| Alina Ibadulla        | Bootstrap episode page, enlistment form, native HTML interactions and responsive checks |
 
 ## Screenshots
 
@@ -85,17 +85,23 @@ Planned division of work:
 
 ![Enlistment form](screenshots/join-desktop.jpg)
 
+### Practice form end note
+
+![Static note shown using CSS target](screenshots/form-status.jpg)
+
 ### Mobile view
 
 ![Home at mobile width](screenshots/home-mobile.jpg)
 
 ## Testing
 
-The pages were checked at desktop, tablet and mobile widths (1280px, 768px and 390px). Navigation, image viewers, Titan search, episode lists and form validation were tested. Links and local assets were also checked.
+The pages were checked at desktop, tablet and mobile widths (1280px, 768px and 390px). Checks were performed with JavaScript disabled: visible navigation, character dossiers, full-image links, episode lists, required fields, email format, minimum text lengths, reset and the form end note. Links and local assets were also checked.
 
 ## Form behaviour
 
-The enlistment form creates a fictional recruit card in the browser. The card can be downloaded as a text file with the entered name and regiment. The form has no backend: the email and message are not sent or saved.
+The enlistment page is a practice form, with no backend or real application submission. The browser checks `required`, `type="email"` and `minlength`. A valid submission uses `method="get"` and `action="join.html#form-status"`; CSS `:target` reveals a static end note.
+
+Personal fields intentionally have no `name` attribute, so the browser does not put their values in the request. The radio inputs share `name="experience"` to form one choice group; this non-personal selection appears in the URL. No card or account is generated, and the site has no storage. `id` still connects each field to its label.
 
 ## Assets and references
 

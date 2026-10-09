@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -25,14 +24,6 @@
             ><small>THE UNOFFICIAL ARCHIVE</small></span
           ></a
         >
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="main-navigation"
-        >
-          Menu +
-        </button>
         <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
           <a href="index.html" aria-current="page">Home</a>
           <a href="about.html">Lore & factions</a>
@@ -174,17 +165,10 @@
               <div class="character-meta">The restless heart</div>
               <h3>Eren Yeager</h3>
               <p>A dream of freedom that begins on the other side of a wall.</p>
-              <button
-                class="dossier-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/eren.png"
-                data-title="Eren Yeager"
-                data-description="Raised in Shiganshina, Eren joins the 104th Cadet Corps with Mikasa and Armin. His determination drives him toward the Survey Corps, while his unusual power forces humanity to reconsider what a Titan can be."
-                aria-label="Read Eren Yeager dossier"
-              >
-                Read dossier ↗
-              </button>
+              <details class="character-details">
+                <summary>Read dossier<span class="visually-hidden">: Eren Yeager</span></summary>
+                <p>Raised in Shiganshina, Eren joins the 104th Cadet Corps with Mikasa and Armin. His determination drives him toward the Survey Corps, while his unusual power forces humanity to reconsider what a Titan can be.</p>
+              </details>
             </article>
             <article class="character-card">
               <div class="character-image">
@@ -202,17 +186,10 @@
                 Exceptional skill. Fierce loyalty. A promise she refuses to
                 forget.
               </p>
-              <button
-                class="dossier-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/mikasa.png"
-                data-title="Mikasa Ackerman"
-                data-description="Mikasa graduates at the top of the 104th Cadet Corps. Her ability with omni-directional mobility gear makes her a remarkable soldier, but the people she protects matter more to her than any rank."
-                aria-label="Read Mikasa Ackerman dossier"
-              >
-                Read dossier ↗
-              </button>
+              <details class="character-details">
+                <summary>Read dossier<span class="visually-hidden">: Mikasa Ackerman</span></summary>
+                <p>Mikasa graduates at the top of the 104th Cadet Corps. Her ability with omni-directional mobility gear makes her a remarkable soldier, but the people she protects matter more to her than any rank.</p>
+              </details>
             </article>
             <article class="character-card">
               <div class="character-image">
@@ -230,17 +207,10 @@
                 A curious mind that sees possibilities where others see dead
                 ends.
               </p>
-              <button
-                class="dossier-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/armin.png"
-                data-title="Armin Arlert"
-                data-description="Armin dreams of an ocean he has only read about. He is not the strongest cadet, but careful observation, imagination and the courage to act make him an essential strategist."
-                aria-label="Read Armin Arlert dossier"
-              >
-                Read dossier ↗
-              </button>
+              <details class="character-details">
+                <summary>Read dossier<span class="visually-hidden">: Armin Arlert</span></summary>
+                <p>Armin dreams of an ocean he has only read about. He is not the strongest cadet, but careful observation, imagination and the courage to act make him an essential strategist.</p>
+              </details>
             </article>
             <article class="character-card">
               <div class="character-image">
@@ -258,17 +228,10 @@
                 Precision under pressure, and the weight of every difficult
                 choice.
               </p>
-              <button
-                class="dossier-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/levi.png"
-                data-title="Levi Ackerman"
-                data-description="A captain in the Survey Corps, Levi leads its elite Special Operations Squad. His extraordinary combat skill is matched by a sharp awareness of the cost of every mission."
-                aria-label="Read Levi Ackerman dossier"
-              >
-                Read dossier ↗
-              </button>
+              <details class="character-details">
+                <summary>Read dossier<span class="visually-hidden">: Levi Ackerman</span></summary>
+                <p>A captain in the Survey Corps, Levi leads its elite Special Operations Squad. His extraordinary combat skill is matched by a sharp awareness of the cost of every mission.</p>
+              </details>
             </article>
           </div>
         </div>
@@ -357,24 +320,5 @@
         </div>
       </div>
     </footer>
-    <dialog
-      class="archive-dialog"
-      id="archive-viewer"
-      aria-labelledby="viewer-title"
-      aria-describedby="viewer-description"
-    >
-      <button
-        class="dialog-close"
-        type="button"
-        aria-label="Close archive viewer"
-      >
-        Close ×
-      </button>
-      <img class="dialog-image" src="assets/images/eren.png" alt="" />
-      <div class="dialog-copy">
-        <h2 id="viewer-title">Archive record</h2>
-        <p id="viewer-description"></p>
-      </div>
-    </dialog>
   </body>
 </html>

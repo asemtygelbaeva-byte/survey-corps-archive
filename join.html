@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Create a fictional Survey Corps recruit card and learn more about this student fan archive."
+      content="Try a fictional Survey Corps enlistment form and learn more about this student fan archive."
     />
     <meta name="theme-color" content="#1e392a" />
     <title>Enlist with the Scouts | Survey Corps Archive</title>
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -25,14 +24,6 @@
             ><small>THE UNOFFICIAL ARCHIVE</small></span
           ></a
         >
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="main-navigation"
-        >
-          Menu +
-        </button>
         <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="about.html">Lore & factions</a>
@@ -66,10 +57,10 @@
             <h2>New recruit record</h2>
             <p class="form-help mb-4">
               Fields marked * are required. This is a fictional activity:
-              information stays in this page and is not sent or stored. Use a
-              nickname and a sample email.
+              no application or account is created. Use a nickname and a sample
+              email to practise completing a recruit record.
             </p>
-            <form id="recruit-form">
+            <form id="recruit-form" action="join.html#form-status" method="get">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label" for="recruit-name-input"
@@ -77,7 +68,6 @@
                   ><input
                     class="form-control"
                     id="recruit-name-input"
-                    name="name"
                     type="text"
                     required
                     minlength="2"
@@ -91,7 +81,6 @@
                   ><input
                     class="form-control"
                     id="recruit-email"
-                    name="email"
                     type="email"
                     required
                     maxlength="120"
@@ -106,7 +95,6 @@
                 ><select
                   class="form-select"
                   id="regiment"
-                  name="regiment"
                   required
                 >
                   <option value="">Select a regiment</option>
@@ -161,7 +149,6 @@
                 ><textarea
                   class="form-control"
                   id="recruit-message"
-                  name="message"
                   rows="4"
                   minlength="10"
                   maxlength="800"
@@ -179,7 +166,6 @@
                   class="form-check-input"
                   id="fan-consent"
                   type="checkbox"
-                  name="consent"
                   required
                 /><label class="form-check-label" for="fan-consent"
                   >I understand this is a fictional fan activity, not a real
@@ -189,38 +175,23 @@
               <div class="form-actions">
                 <button
                   class="btn btn-gold"
-                  id="create-card"
                   type="submit"
-                  disabled
                 >
-                  CREATE RECRUIT CARD ↗</button
+                  CHECK PRACTICE FORM ↗</button
                 ><button class="btn btn-outline-archive" type="reset">
                   CLEAR FORM
                 </button>
               </div>
-              <noscript
-                ><p class="spoiler-note mt-3">
-                  Enable JavaScript to create a card. This form does not send
-                  data to a server.
-                </p></noscript
-              >
             </form>
-            <section
-              class="form-status"
-              id="form-status"
-              role="status"
-              tabindex="-1"
-              hidden
-            >
-              <p class="eyebrow">Recruit card ready</p>
-              <h3>Welcome, <span id="recruit-name"></span>.</h3>
+            <section class="form-status" id="form-status" aria-labelledby="form-status-title" tabindex="-1">
+              <p class="eyebrow">End of the practice form</p>
+              <h3 id="form-status-title">Ready for your next expedition?</h3>
               <p class="small">
-                Chosen regiment: <strong id="recruit-regiment"></strong>. Your
-                fictional record is ready. No application or email was sent.
+                This is a sample enlistment exercise. No account, application
+                or recruit card has been created. Explore the archive, or
+                start a new practice record.
               </p>
-              <button class="btn btn-gold" id="download-card" type="button">
-                DOWNLOAD CARD ↓
-              </button>
+              <a class="btn btn-gold" href="join.html">START AGAIN ↗</a>
             </section>
           </div>
           <aside class="join-aside" id="contact">
@@ -236,8 +207,8 @@
                 researcher, a defender — courage takes different forms.
               </li>
               <li>
-                <strong>Make it your story.</strong><br />Create a recruit card.
-                Keep it, or start over with another regiment.
+                <strong>Make it your story.</strong><br />Complete the practice form.
+                Imagine a new role, or try another regiment.
               </li>
             </ol>
             <hr />
@@ -265,12 +236,13 @@
                 </p>
               </details>
               <details>
-                <summary>Does this send my information anywhere?</summary>
+                <summary>What happens when I check the form?</summary>
                 <p>
-                  No. The form validates in your browser and creates a text card
-                  containing only your name and chosen regiment. The email and
-                  message are not included in the download. Reloading the page
-                  clears the generated card.
+                  Your browser checks the required fields, email format and text
+                  length, then opens an end note on this page. Only the selected
+                  series-experience option appears in the page address. Your
+                  name, email and message are not submitted. This is a practice
+                  activity, so no application is sent or saved.
                 </p>
               </details>
               <details>
