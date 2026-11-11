@@ -1,101 +1,70 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A searchable comparison of the Nine Titans and a gallery of key moments from Attack on Titan."
-    />
-    <meta name="theme-color" content="#1e392a" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A searchable comparison of the Nine Titans and a gallery of key moments from Attack on Titan.">
+    <meta name="theme-color" content="#1e392a">
     <title>The Nine Titans | Survey Corps Archive</title>
-    <link rel="icon" href="assets/crest.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
+    <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="vendor/jquery.min.js" defer></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html"
-          ><img src="assets/crest.svg" alt="" width="37" height="48" /><span
-            ><strong>SURVEY CORPS</strong
-            ><small>THE UNOFFICIAL ARCHIVE</small></span
-          ></a
-        >
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="main-navigation"
-        >
+        <a class="brand" href="index.html">
+          <img src="assets/crest.svg" alt="" width="37" height="48">
+          <span>
+            <strong>SURVEY CORPS</strong>
+            <small>THE UNOFFICIAL ARCHIVE</small>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
           Menu +
         </button>
         <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
           <a href="index.html">Home</a>
-          <a href="about.html">Lore & factions</a>
+          <a href="about.html">Lore &amp; factions</a>
           <a href="titans.html" aria-current="page">Titan archive</a>
           <a href="episodes.html">Episodes</a>
-          <a href="join.html" class="nav-enlist">Enlist →</a>
+          <a href="join.html" class="nav-enlist">Enlist</a>
         </nav>
       </div>
     </header>
     <main id="main">
       <section class="page-intro">
         <div class="container">
-          <nav class="breadcrumb-line" aria-label="Breadcrumb">
-            <a href="index.html">ARCHIVE</a><span aria-hidden="true">/</span
-            ><span>TITAN ARCHIVE</span>
-          </nav>
-          <p class="eyebrow">Field guide · Chapter 02</p>
-          <h1>Know your<br />enemy. And yourself.</h1>
-          <p class="lead mb-0">
-            Nine inherited powers. Many different lives. A field reference to
-            the Titans that shape the balance of the world.
-          </p>
+          <h1>The Nine Titans</h1>
+          <p class="lead mb-0">Compare Titan powers, search the records and browse scenes from the anime.</p>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Intelligence division</p>
-              <h2>Nine powers. One origin.</h2>
+              <h2>Titan records</h2>
             </div>
-            <p>
-              Records are fixed at the beginning of year 854, immediately before
-              the raid on Liberio. Later transfers are not included.
-            </p>
+            <p>Starting records: year 854, before the raid on Liberio.</p>
           </div>
-          <p class="spoiler-note">
-            Final Season spoilers: this table reveals Titan identities. Heights
-            refer to the listed or noted forms, not every possible
-            manifestation.
-          </p>
+          <p class="spoiler-note">Contains Final Season spoilers and Titan identities.</p>
           <div class="record-toolbar">
             <div class="record-search">
-              <label class="visually-hidden" for="titan-search"
-                >Search Titans, inheritors or abilities</label
-              ><input
-                class="form-control"
-                id="titan-search"
-                type="search"
-                placeholder="Search a Titan, inheritor or ability…"
-                autocomplete="off"
-              />
+              <label class="visually-hidden" for="titan-search">Search Titans, inheritors or abilities</label>
+              <input class="form-control" id="titan-search" type="search" placeholder="Search a Titan, inheritor or ability…" autocomplete="off">
             </div>
-            <span class="small-label muted" id="record-count" role="status"
-              >9 of 9 records</span
-            >
+            <span class="small-label muted" id="record-count" role="status">9 of 9 records</span>
           </div>
-          <div
-            class="table-scroll"
-            role="region"
-            aria-label="Nine Titans comparison, scroll horizontally on small screens"
-            tabindex="0"
-          >
+          <div class="filter-buttons" role="group" aria-label="Filter by status">
+            <button type="button" class="btn active" data-category="all" aria-pressed="true">All</button>
+            <button type="button" class="btn" data-category="active" aria-pressed="false">Active</button>
+            <button type="button" class="btn" data-category="other" aria-pressed="false">Other statuses</button>
+          </div>
+          <div class="table-scroll" role="region" aria-label="Nine Titans comparison, scroll horizontally on small screens" tabindex="0">
             <table class="titan-table">
               <caption>
                 Nine Titans comparison · Year 854, before Liberio
@@ -107,231 +76,117 @@
                   <th scope="col">Height</th>
                   <th scope="col">Key abilities</th>
                   <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Founding Titan</th>
-                  <td>Eren Yeager</td>
-                  <td>Varies¹</td>
-                  <td>Commands Titans; influences memories</td>
-                  <td><span class="status-tag">Restricted access</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Attack Titan</th>
-                  <td>Eren Yeager</td>
-                  <td>15 m</td>
-                  <td>Close combat; exceptional endurance</td>
-                  <td><span class="status-tag">Active</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Colossal Titan</th>
-                  <td>Armin Arlert</td>
-                  <td>60 m</td>
-                  <td>Enormous scale; heat and steam</td>
-                  <td><span class="status-tag">Active</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Armored Titan</th>
-                  <td>Reiner Braun</td>
-                  <td>15 m</td>
-                  <td>Hardened armour plates</td>
-                  <td><span class="status-tag">Active</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Female Titan</th>
-                  <td>Annie Leonhart</td>
-                  <td>14 m</td>
-                  <td>Agility; hardening</td>
-                  <td><span class="status-tag">Crystallised</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Beast Titan</th>
-                  <td>Zeke Yeager</td>
-                  <td>17 m</td>
-                  <td>Long-range throwing</td>
-                  <td><span class="status-tag">Active</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Jaw Titan</th>
-                  <td>Porco Galliard</td>
-                  <td>5 m</td>
-                  <td>Speed; powerful jaws and claws</td>
-                  <td><span class="status-tag">Active</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Cart Titan</th>
-                  <td>Pieck Finger</td>
-                  <td>4 m</td>
-                  <td>Endurance; mobile support</td>
-                  <td><span class="status-tag">Active</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">War Hammer Titan</th>
-                  <td>Lara Tybur</td>
-                  <td>About 15 m</td>
-                  <td>Creates hardened weapons</td>
-                  <td><span class="status-tag">Concealed</span></td>
-                </tr>
-              </tbody>
+              <tbody id="titan-rows"></tbody>
             </table>
           </div>
-          <p id="no-records" class="spoiler-note mt-3" hidden>
-            No records match your search. Try “Eren”, “armour” or “15 m”.
-          </p>
+          <noscript>
+            <p>Enable JavaScript to view and edit the Titan table.</p>
+          </noscript>
+          <p id="no-records" class="spoiler-note mt-3" hidden>No records match. Try another search or choose All.</p>
           <p class="table-footnote">
             ¹ The Founding Titan has no single height: Frieda Reiss’s form was
             13 m; Eren’s ordinary Attack Titan form is 15 m. These are different
             forms, not a fixed Founding Titan measurement. Reference:
-            <a
-              href="https://attackontitan.fandom.com/wiki/Nine_Titans_(Anime)"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Nine Titans (anime)</a
-            >.
+            <a href="https://attackontitan.fandom.com/wiki/Nine_Titans_(Anime)" target="_blank" rel="noopener noreferrer">Nine Titans (anime)</a>.
           </p>
+          <details class="titan-editor" id="titan-editor">
+            <summary>Add or edit a Titan</summary>
+            <p class="form-help mt-3">Changes are temporary. Reload the page to restore the original nine records.</p>
+            <form id="titan-form" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="titan-name">Titan power</label>
+                  <input class="form-control" id="titan-name" name="power" required maxlength="60">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="titan-inheritor">Inheritor</label>
+                  <input class="form-control" id="titan-inheritor" name="inheritor" required maxlength="60">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="titan-height">Height</label>
+                  <input class="form-control" id="titan-height" name="height" required maxlength="30" placeholder="e.g. 15 m">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="titan-status">Status</label>
+                  <select class="form-select" id="titan-status" name="status">
+                    <option>Active</option>
+                    <option>Crystallised</option>
+                    <option>Restricted access</option>
+                    <option>Concealed</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="titan-ability">Key abilities</label>
+                  <input class="form-control" id="titan-ability" name="ability" required maxlength="160">
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-gold" type="submit" id="save-titan">Add Titan</button>
+                <button class="btn" type="button" id="cancel-edit" hidden>Cancel edit</button>
+              </div>
+            </form>
+          </details>
+          <p id="table-status" class="mt-3" role="status"></p>
         </div>
       </section>
       <section class="section paper-section" id="battle-gallery">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">From the field</p>
-              <h2>Moments that changed<br />the battlefield.</h2>
+              <h2>Battle gallery</h2>
             </div>
             <p>
               Six records from the anime. Select a still for a closer look.
               Includes scenes through the Final Season.
             </p>
           </div>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/fall-shiganshina.jpg"
-                data-title="The day the wall fell"
-                data-description="The Colossal Titan appears at Shiganshina, breaking a century of apparent safety."
-                aria-label="View The day the wall fell"
-              >
-                <img
-                  src="assets/images/fall-shiganshina.jpg"
-                  alt="The Colossal Titan appears at Shiganshina, breaking a century of apparent safety."
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
+          <div class="row g-4">
+            <figure class="gallery-item col-12 col-sm-6 col-lg-4">
+              <button class="gallery-button" type="button" data-viewer data-image="assets/images/fall-shiganshina.jpg" data-title="The day the wall fell" data-description="The Colossal Titan appears at Shiganshina, breaking a century of apparent safety." aria-label="View The day the wall fell">
+                <img src="assets/images/fall-shiganshina.jpg" alt="The Colossal Titan appears at Shiganshina, breaking a century of apparent safety." width="800" height="450" loading="lazy">
               </button>
               <figcaption>
                 The day the wall fell<small>Season 1 · Episode 1</small>
               </figcaption>
             </figure>
-            <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-trost.jpg"
-                data-title="The defence of Trost"
-                data-description="Eren faces the Colossal Titan during the battle for the southern district of Wall Rose."
-                aria-label="View The defence of Trost"
-              >
-                <img
-                  src="assets/images/battle-trost.jpg"
-                  alt="Eren faces the Colossal Titan during the battle for the southern district of Wall Rose."
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
+            <figure class="gallery-item col-12 col-sm-6 col-lg-4">
+              <button class="gallery-button" type="button" data-viewer data-image="assets/images/battle-trost.jpg" data-title="The defence of Trost" data-description="Eren faces the Colossal Titan during the battle for the southern district of Wall Rose." aria-label="View The defence of Trost">
+                <img src="assets/images/battle-trost.jpg" alt="Eren faces the Colossal Titan during the battle for the southern district of Wall Rose." width="800" height="450" loading="lazy">
               </button>
               <figcaption>
                 The defence of Trost<small>Season 1 · Episode 5</small>
               </figcaption>
             </figure>
-            <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-stohess.jpg"
-                data-title="A battle in Stohess"
-                data-description="The confrontation with the Female Titan reaches the streets of Stohess."
-                aria-label="View A battle in Stohess"
-              >
-                <img
-                  src="assets/images/battle-stohess.jpg"
-                  alt="The confrontation with the Female Titan reaches the streets of Stohess."
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
+            <figure class="gallery-item col-12 col-sm-6 col-lg-4">
+              <button class="gallery-button" type="button" data-viewer data-image="assets/images/battle-stohess.jpg" data-title="A battle in Stohess" data-description="The confrontation with the Female Titan reaches the streets of Stohess." aria-label="View A battle in Stohess">
+                <img src="assets/images/battle-stohess.jpg" alt="The confrontation with the Female Titan reaches the streets of Stohess." width="800" height="450" loading="lazy">
               </button>
               <figcaption>
                 A battle in Stohess<small>Season 1 · Episode 25</small>
               </figcaption>
             </figure>
-            <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-shiganshina.jpg"
-                data-title="Return to Shiganshina"
-                data-description="The Scouts return to the district where the story began, seeking to reclaim Wall Maria."
-                aria-label="View Return to Shiganshina"
-              >
-                <img
-                  src="assets/images/battle-shiganshina.jpg"
-                  alt="The Scouts return to the district where the story began, seeking to reclaim Wall Maria."
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
+            <figure class="gallery-item col-12 col-sm-6 col-lg-4">
+              <button class="gallery-button" type="button" data-viewer data-image="assets/images/battle-shiganshina.jpg" data-title="Return to Shiganshina" data-description="The Scouts return to the district where the story began, seeking to reclaim Wall Maria." aria-label="View Return to Shiganshina">
+                <img src="assets/images/battle-shiganshina.jpg" alt="The Scouts return to the district where the story began, seeking to reclaim Wall Maria." width="800" height="450" loading="lazy">
               </button>
               <figcaption>
                 Return to Shiganshina<small>Season 3 · Episode 50</small>
               </figcaption>
             </figure>
-            <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-liberio.jpg"
-                data-title="Attack on Liberio"
-                data-description="Eren’s Attack Titan during the raid on Liberio."
-                aria-label="View Attack on Liberio"
-              >
-                <img
-                  src="assets/images/battle-liberio.jpg"
-                  alt="Eren’s Attack Titan during the raid on Liberio."
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
+            <figure class="gallery-item col-12 col-sm-6 col-lg-4">
+              <button class="gallery-button" type="button" data-viewer data-image="assets/images/battle-liberio.jpg" data-title="Attack on Liberio" data-description="Eren’s Attack Titan during the raid on Liberio." aria-label="View Attack on Liberio">
+                <img src="assets/images/battle-liberio.jpg" alt="Eren’s Attack Titan during the raid on Liberio." width="800" height="450" loading="lazy">
               </button>
               <figcaption>
                 Attack on Liberio<small>Final Season · Episode 65</small>
               </figcaption>
             </figure>
-            <figure class="gallery-item">
-              <button
-                class="gallery-button"
-                type="button"
-                data-viewer
-                data-image="assets/images/battle-liberio-scouts.jpg"
-                data-title="The other side of the war"
-                data-description="A close-up of an Eldian armband in a scene from episode 66."
-                aria-label="View The other side of the war"
-              >
-                <img
-                  src="assets/images/battle-liberio-scouts.jpg"
-                  alt="A close-up of an Eldian armband in a scene from episode 66."
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
+            <figure class="gallery-item col-12 col-sm-6 col-lg-4">
+              <button class="gallery-button" type="button" data-viewer data-image="assets/images/battle-liberio-scouts.jpg" data-title="The other side of the war" data-description="A close-up of an Eldian armband in a scene from episode 66." aria-label="View The other side of the war">
+                <img src="assets/images/battle-liberio-scouts.jpg" alt="A close-up of an Eldian armband in a scene from episode 66." width="800" height="450" loading="lazy">
               </button>
               <figcaption>
                 The other side of the war<small>Final Season · Episode 66</small>
@@ -345,64 +200,49 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-intro">
-            <a class="brand" href="index.html"
-              ><img src="assets/crest.svg" alt="" width="37" height="48" /><span
-                ><strong>SURVEY CORPS</strong
-                ><small>THE UNOFFICIAL ARCHIVE</small></span
-              ></a
-            >
-            <p>
-              A fan-made field guide to the world of Attack on Titan. For the
-              curious, the rewatchers, and everyone who looked beyond the walls.
-            </p>
+            <a class="brand" href="index.html">
+              <img src="assets/crest.svg" alt="" width="37" height="48">
+              <span>
+                <strong>SURVEY CORPS</strong>
+                <small>THE UNOFFICIAL ARCHIVE</small>
+              </span>
+            </a>
+            <p>An unofficial Attack on Titan fan website. Web Technologies project, SE-2540.</p>
           </div>
           <div class="footer-links">
             <div>
-              <b>Explore</b><a href="about.html">Lore & factions</a
-              ><a href="titans.html">The Nine Titans</a
-              ><a href="episodes.html">Episode guide</a>
+              <b>Explore</b>
+              <a href="about.html">Lore &amp; factions</a>
+              <a href="titans.html">The Nine Titans</a>
+              <a href="episodes.html">Episode guide</a>
             </div>
             <div>
-              <b>Contact & connect</b
-              ><a href="join.html#contact">Contact the archive</a
-              ><a
-                href="https://shingeki.tv/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Official anime website ↗</a
-              ><a
-                href="https://x.com/anime_shingeki"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Official X / Twitter ↗</a
-              ><a href="https://www.instagram.com/anime_shingeki_official" target="_blank" rel="noopener noreferrer">Official Instagram ↗</a
-              ><a href="about.html#credits">Sources & credits</a>
+              <b>Contact &amp; connect</b>
+              <a href="join.html#contact">Contact the archive</a>
+              <a href="https://shingeki.tv/" target="_blank" rel="noopener noreferrer">Official anime website ↗</a>
+              <a href="https://x.com/anime_shingeki" target="_blank" rel="noopener noreferrer">Official X / Twitter ↗</a>
+              <a href="https://www.instagram.com/anime_shingeki_official" target="_blank" rel="noopener noreferrer">Official Instagram ↗</a>
+              <a href="about.html#credits">Sources &amp; credits</a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© 2026 Survey Corps Archive · SE-2540 student project.</span
-          ><span
-            >Attack on Titan © Hajime Isayama / Kodansha and the anime
-            production committees. Unofficial fan site.</span
-          >
+          <span>© 2026 Survey Corps Archive · SE-2540 student project.</span>
+          <span>Attack on Titan © Hajime Isayama / Kodansha and the anime
+            production committees. Unofficial fan site.</span>
         </div>
       </div>
     </footer>
-    <dialog
-      class="archive-dialog"
-      id="archive-viewer"
-      aria-labelledby="viewer-title"
-      aria-describedby="viewer-description"
-    >
-      <button
-        class="dialog-close"
-        type="button"
-        aria-label="Close archive viewer"
-      >
+    <dialog class="archive-dialog" id="archive-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-description">
+      <button class="dialog-close" type="button" aria-label="Close archive viewer">
         Close ×
       </button>
-      <img class="dialog-image" src="assets/images/eren.png" alt="" />
+      <img class="dialog-image" src="assets/images/eren.png" alt="">
+      <div class="viewer-controls">
+        <button type="button" id="previous-image" aria-label="Previous image">← Previous</button>
+        <span id="viewer-count" role="status"></span>
+        <button type="button" id="next-image" aria-label="Next image">Next →</button>
+      </div>
       <div class="dialog-copy">
         <h2 id="viewer-title">Archive record</h2>
         <p id="viewer-description"></p>
