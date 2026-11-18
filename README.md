@@ -66,4 +66,4 @@ Character data comes from [Jikan](https://jikan.moe/) and [AniList](https://anil
 The series and artwork belong to their original rights holders.
 
 AI tools, including OpenAI Codex, assisted with JavaScript organization, API error handling,
-testing and documentation. The team is responsible for reviewing and explaining the submitted code.
+testing and documentation. 
