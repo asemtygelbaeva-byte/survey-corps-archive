@@ -6,24 +6,15 @@
     <meta name="description" content="Create a fictional Survey Corps recruit card and learn more about this student fan archive.">
     <meta name="theme-color" content="#1e392a">
     <title>Enlist with the Scouts | Survey Corps Archive</title>
-    <script>
-      (function () {
-        var root = document.documentElement, theme = "dark", user = null;
-        root.className += " js";
-        try {
-          theme = localStorage.getItem("sca-theme") === "light" ? "light" : "dark";
-          user = JSON.parse(localStorage.getItem("sca-user") || "null");
-        } catch (error) {}
-        root.setAttribute("data-theme", theme);
-        root.setAttribute("data-auth", user && user.name ? "in" : "out");
-      })();
-    </script>
+    <script src="js/init.js"></script>
     <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="vendor/jquery.min.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="js/account.js" defer></script>
+    <script src="js/titans.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -49,11 +40,12 @@
         </nav>
         <div class="header-tools">
           <button class="theme-toggle btn" type="button" aria-label="Switch to light theme" title="Switch colour theme">
-            <span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Light</span>
+            <span class="theme-icon" aria-hidden="true">☀</span>
+            <span class="theme-label">Light</span>
           </button>
           <a class="btn only-guest signin-link" href="signin.html">Sign in</a>
           <span class="user-chip only-user">
-            <span class="user-name" data-user-name></span>
+            <a class="user-name" data-user-name href="signin.html" aria-label="Open your account"></a>
             <button class="btn" type="button" data-signout>Sign out</button>
           </span>
         </div>

@@ -6,24 +6,15 @@
     <meta name="description" content="Search and filter Attack on Titan characters with live data from the public Jikan API.">
     <meta name="theme-color" content="#1e392a">
     <title>Character database | Survey Corps Archive</title>
-    <script>
-      (function () {
-        var root = document.documentElement, theme = "dark", user = null;
-        root.className += " js";
-        try {
-          theme = localStorage.getItem("sca-theme") === "light" ? "light" : "dark";
-          user = JSON.parse(localStorage.getItem("sca-user") || "null");
-        } catch (error) {}
-        root.setAttribute("data-theme", theme);
-        root.setAttribute("data-auth", user && user.name ? "in" : "out");
-      })();
-    </script>
+    <script src="js/init.js"></script>
     <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="vendor/jquery.min.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="js/account.js" defer></script>
+    <script src="js/titans.js" defer></script>
     <script src="js/characters-fallback.js" defer></script>
     <script src="js/characters.js" defer></script>
   </head>
@@ -51,11 +42,12 @@
         </nav>
         <div class="header-tools">
           <button class="theme-toggle btn" type="button" aria-label="Switch to light theme" title="Switch colour theme">
-            <span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Light</span>
+            <span class="theme-icon" aria-hidden="true">☀</span>
+            <span class="theme-label">Light</span>
           </button>
           <a class="btn only-guest signin-link" href="signin.html">Sign in</a>
           <span class="user-chip only-user">
-            <span class="user-name" data-user-name></span>
+            <a class="user-name" data-user-name href="signin.html" aria-label="Open your account"></a>
             <button class="btn" type="button" data-signout>Sign out</button>
           </span>
         </div>
@@ -93,7 +85,8 @@
           </div>
           <div class="char-meta">
             <p class="small-label muted" id="char-status" role="status">Loading characters…</p>
-            <p class="form-help only-guest"><a href="signin.html">Sign in</a> to save favourite characters.</p>
+            <p class="form-help only-guest">
+              <a href="signin.html">Sign in</a> to save favourite characters.</p>
           </div>
           <div class="api-notice" id="char-notice" role="status" hidden></div>
           <div class="api-error" id="char-error" role="alert" hidden>
@@ -102,7 +95,9 @@
           </div>
           <div class="char-grid" id="char-grid" aria-busy="true"></div>
           <p class="empty-note" id="char-empty" hidden>No characters match. Try another search or filter.</p>
-          <div class="char-more"><button class="btn" id="char-more" type="button" hidden>Show more</button></div>
+          <div class="char-more">
+            <button class="btn" id="char-more" type="button" hidden>Show more</button>
+          </div>
           <noscript>
             <p class="spoiler-note">Enable JavaScript to load characters from the API.</p>
           </noscript>
