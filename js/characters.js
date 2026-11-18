@@ -196,7 +196,17 @@
   function readCache() {
     try {
       const saved = JSON.parse(store.get(CACHE_KEY));
-      if (saved && saved.version === 2 && Array.isArray(saved.items) && saved.items.length && saved.time) return saved;
+      if (!saved || saved.version !== 2 || !Number.isFinite(saved.time) || saved.time <= 0) return null;
+      if (!Array.isArray(saved.items) || !saved.items.length) return null;
+      const valid = saved.items.every(function (item) {
+        return item && typeof item.key === "string" && typeof item.name === "string" &&
+          typeof item.role === "string" && Number.isFinite(item.favorites) &&
+          typeof item.image === "string" && typeof item.url === "string" &&
+          Array.isArray(item.voices) && item.voices.every(function (voice) {
+            return voice && typeof voice.name === "string" && typeof voice.language === "string";
+          });
+      });
+      if (valid) return saved;
     } catch (error) { /* no usable cache */ }
     return null;
   }
