@@ -65,5 +65,5 @@ Image credits and font licences are listed in [ASSET_SOURCES.md](ASSET_SOURCES.m
 Character data comes from [Jikan](https://jikan.moe/) and [AniList](https://anilist.co/).
 The series and artwork belong to their original rights holders.
 
-AI tools, including OpenAI Codex, assisted with JavaScript organization, API error handling,
-testing and documentation. 
+AI Tools Acknowledgment:
+AI assistants were used as supporting tools for code debugging, brainstorming FAQ questions, and reviewing JavaScript syntax. All final code implementation, integration, and design choices were reviewed and verified by the project group members.
