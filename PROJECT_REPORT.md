@@ -93,7 +93,5 @@ The remaining three minutes are for individual questions, one minute per student
 - Image credits and licences: [ASSET_SOURCES.md](ASSET_SOURCES.md)
 - API documentation: [Jikan](https://docs.api.jikan.moe/) and [AniList](https://docs.anilist.co/)
 
-AI tools, including OpenAI Codex, assisted with JavaScript organization, API error handling, testing
-and documentation. The team is responsible for reviewing and explaining the submitted code.
-The same acknowledgement is included on the website's Sources and credits section.
-Attack on Titan and its artwork belong to their original rights holders.
+AI Tools Acknowledgment:
+AI assistants were used as supporting tools for code debugging, brainstorming FAQ questions, and reviewing JavaScript syntax. All final code implementation, integration, and design choices were reviewed and verified by the project group members.
