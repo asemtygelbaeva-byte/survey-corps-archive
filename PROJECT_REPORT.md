@@ -51,8 +51,6 @@ The name displayed in the header now links to the account page, which remains re
 | Zhansaya Boranbaikyzy | `zhansayaboranbaykyzy07-code` | Public API and JSON processing, catalogue search/filters, cache validation, Titan records and error states |
 | Alina Ibadulla | `alina7-p` | Sign-in/out and profile persistence, input validation, registration and jQuery FAQ |
 
-These are the module responsibilities for reviewing, maintaining and presenting the Final version.
-All members need to understand the complete project as well as their own part.
 
 ## Verification
 
